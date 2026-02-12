@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eclipse Restaurant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">ECLIPSE</div>
+        <ul>
+            <li><a href="#">Visit Us</a></li>
+            <li><a href="#">Dining & Drinks</a></li>
+            <li><a href="#" class="btn-outline">Reservations</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content" id="heroText">
+        <h1>ECLIPSE</h1>
+        <p>Savor the shadow, Taste The Light</p>
+        <button class="btn-main" onclick="scrollToCards()">Reservations</button>
+        </div>
+    </section>
+
+    <section class="section" id="cards">
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1544025162-d76694265947">
+            <h3>Dining</h3>
+        </div>
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1514361892635-cebbdd4a0e6c">
+        <h3>The Bar</h3>
+    </div>
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836">
+        <h3>View</h3>
+    </div>
+</section>
+
+<!-- JavaScript -->
+
+<script>
+    window.addEventListener("scroll", function(){
+        const nav = document.getElementById("navbar");
+        if(window.scrollY > 50){
+            nav.classList.add("scrolled");
+        }else{
+            nav.classList.remove("scrolled");
+        }
+        });
+
+    window.addEventListener("load", function(){
+        document.getElementById("heroText").classList.add("show");
+    });
+
+    function scrollToCards(){
+        document.getElementById("cards").scrollIntoView({behavior: "smooth"});
+    }
+
+    const cards = document.querySelectorAll(".card");
+
+window.addEventListener("scroll", function(){
+    const triggerBottom = window.innerHeight * 0.8;
+
+    cards.forEach(card => {
+        const cardTop = card.getBoundingClientRect().top;
+
+        if(cardTop < triggerBottom){
+            card.classList.add("show");
+        }
+    });
+});
+
+
+</script>
+</body>
+</html>
