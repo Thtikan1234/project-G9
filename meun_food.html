@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dining & Drink - Eclipse</title>
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+<!-- CSS -->
+ <link rel="stylesheet" href="menu.css">
+
+</head>
+
+<body>
+
+<section class="hero text-center text-white">
+<div class="container hero-content">
+
+    <!-- Back Button -->
+<a href="index.html" class="back-btn">
+    ← Back
+</a>
+
+
+    <h1 class="title-big mb-4">Dining & Drink</h1>
+
+    <!-- Toggle Buttons -->
+    <div class="d-flex justify-content-center gap-4 mb-4">
+        <button class="btn btn-outline-gold active" onclick="showDining()">Dining</button>
+        <button class="btn btn-outline-gold" onclick="showBar()">The Bar</button>
+    </div>
+
+    <!-- MENU BOX -->
+    <div class="menu-box">
+        <div class="row align-items-center">
+
+            <!-- Menu List -->
+            <div class="col-md-7 text-start">
+                <h2 class="subtitle mb-4" id="menuTitle">Dining</h2>
+
+                <div id="menuContent">
+                    <div class="menu-item">
+                        <span>Fish & Chips</span>
+                        <span>150 บาท</span>
+                    </div>
+                    <div class="menu-item">
+                        <span>Grilled Salmon</span>
+                        <span>225 บาท</span>
+                    </div>
+                    <div class="menu-item">
+                        <span>Tom Yum</span>
+                        <span>100 บาท</span>
+                    </div>
+                    <div class="menu-item">
+                        <span>Truffle Steak</span>
+                        <span>290 บาท</span>
+                    </div>
+                    <div class="menu-item">
+                        <span>Pepperoni Pizza</span>
+                        <span>329 บาท</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Image -->
+            <div class="col-md-5 mt-4 mt-md-0">
+                <img id="menuImage"
+                src="https://images.unsplash.com/photo-1544025162-d76694265947"
+                class="food-img">
+            </div>
+
+        </div>
+    </div>
+
+</div>
+</section>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- ฟังก์ชันนี้ทำงานเมื่อกดปุ่ม "Dining" -->
+
+<script>
+function showDining(){
+    document.getElementById("menuTitle").innerText = "Dining";
+    document.getElementById("menuImage").src =
+        "https://images.unsplash.com/photo-1544025162-d76694265947";
+
+    document.getElementById("menuContent").innerHTML = `
+        <div class="menu-item">
+            <span>Fish & Chips</span>
+            <span>150 บาท</span>
+        </div>
+        <div class="menu-item">
+            <span>Grilled Salmon</span>
+            <span>225 บาท</span>
+        </div>
+        <div class="menu-item">
+            <span>Tom Yum</span>
+            <span>100 บาท</span>
+        </div>
+        <div class="menu-item">
+            <span>Truffle Steak</span>
+            <span>290 บาท</span>
+        </div>
+    `;
+}
+
+<!-- ฟังก์ชันนี้ทำงานเมื่อกดปุ่ม "Drink" -->
+
+function showBar(){
+    document.getElementById("menuTitle").innerText = "The Bar";
+    document.getElementById("menuImage").src =
+        "https://blog-static.kkday.com/th/blog/wp-content/uploads/kobby-mendez-xBFTjrMIC0c-unsplash.jpg";
+
+    document.getElementById("menuContent").innerHTML = `
+        <div class="menu-item">
+            <span>piña colada</span>
+            <span>120 บาท</span>
+        </div>
+        <div class="menu-item">
+            <span>Coke</span>
+            <span>30 บาท</span>
+        </div>
+        <div class="menu-item">
+            <span>Red Wine</span>
+            <span>150 บาท</span>
+        </div>
+        <div class="menu-item">
+            <span>water</span>
+            <span>20 บาท</span>
+        </div>
+        <div class="menu-item">
+            <span>Green Tea</span>
+            <span>45 บาท</span>
+        </div>
+    `;
+}
+</script>
+
+</body>
+</html>
