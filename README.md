@@ -63,4 +63,17 @@
 
  ## Test  case ของระบบ และผลการทดสอบระบบในส่วนที่พัฒนา, API Testing
 
+ ## API End-Point
+- admin : 
+
+1. POST /login
+- Description: ใช้สำหรับเข้าสู่ระบบ Admin
+- Request: username, password
+- Response: token
+
+2. GET /dashboard
+- Description: ใช้สำหรับดึงข้อมูล Dashboard
+- Header: Authorization (token)
+- Response: stats, orders, charts
+
 
