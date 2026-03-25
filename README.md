@@ -34,7 +34,23 @@
 
 
 5. UX/UI
+### Homepage
+![alt text](image.png)
 
+### หน้าจอง
+![alt text](image-1.png)
+
+### ประวัติ
+![alt text](image-2.png)
+
+### History in
+![alt text](image-3.png)
+
+### ตัวอย่างเมนู
+![alt text](image-4.png)
+
+### ที่อยู่
+![alt text](image-5.png)
 
 ## Teach Stack
 
