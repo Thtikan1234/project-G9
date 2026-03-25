@@ -20,13 +20,29 @@
 
 ## ผลงานการออกแบบ
 1. System Architecture
+1.Frontend 
+ทำหน้าที่:
+       แสดงข้อมูลโต๊ะ
+       กรอกข้อมูลจอง
+       ส่ง request ไป API
+       แสดงหน้า Map
+2.Backend
+ทำหน้าที่:
+      รับ request จาก frontend
+      ประมวลผล logic
+      ติดต่อ database
 
+3.Database
+ทำหน้าที่: 
+       เก็บ reservations
 
 2. Use case diagram
+![alt text](usecasediagram.png)
 
 
 
 3. Activity Diagram
+![alt text](activitydiagram.png)
 
 
 4. ER Diagram
@@ -76,4 +92,59 @@
 - Header: Authorization (token)
 - Response: stats, orders, charts
 
+- user :
+
+1. GET - ดูรายการทั้งหมด
+- Description: ใช้สำหรับดึงข้อมูลรายการจองทั้งหมดจากระบบ (ข้อมูลถูกเก็บแบบ in-memory)
+- Header: Content-Type: application/json
+- Response: """" [
+  {
+    "id": 1,
+    "name": "Table for 2",
+    "price": 1200
+  },
+  {
+    "id": 2,
+    "name": "Table for 4",
+    "price": 2000
+  }
+] """"
+
+2. POST - เพิ่มการจอง
+- Description: ใช้สำหรับเพิ่มรายการจองใหม่เข้าสู่ระบบ โดยต้องระบุชื่อและราคา
+- Header: Content-Type: application/json
+- Request Body : """ {
+  "id": 3,
+  "name": "Table for 6",
+  "price": 3000
+} """
+- Response : """ {
+  "message": "Reservation added"
+} """
+- Error Response : """ {
+  "message": "Invalid data"
+} """
+
+3. DELETE - ลบการจอง
+- Description: ใช้สำหรับลบข้อมูลการจองตาม id ที่ระบุ
+- Header: Content-Type: application/json
+- Response: """ {
+  "message": "Deleted successfully"
+} """ 
+
+4. POST - ตรวจสอบ history
+- Description: ใช้สำหรับตรวจสอบประวัติการจอง โดยผู้ใช้ต้องกรอกข้อมูลยืนยัน เช่น หมายเลขจอง อีเมล เบอร์โทร
+- Header: Content-Type: application/json
+- Request Body : """ {
+  "reserveNumber": 1,
+  "email": "test@email.com",
+  "phone": "0999999999",
+} """
+- Response : """{
+  "message": "Verified",
+  "_id": 1
+} """
+- Error Response :"""{
+  "message": "Invalid information"
+} """
 
