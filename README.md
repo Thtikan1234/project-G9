@@ -38,10 +38,11 @@
 
 ## Teach Stack
 
+- Ux/Ui desgin : Figma
 - FrontEnd : HTML CSS Js 
 - Backend : json js
 - DataBase : MySQL
-- API : Leaflet.js API = สร้าง MAp
+- API : Leaflet.js API = สร้าง Map
 
 
  ## Test  case ของระบบ และผลการทดสอบระบบในส่วนที่พัฒนา, API Testing
