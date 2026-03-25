@@ -30,27 +30,27 @@
 
 
 4. ER Diagram
-![alt text](ER-dirgram.png)
+![alt text](img/Database-Er.jpg)
 
 
 5. UX/UI
 ### Homepage
-![alt text](image.png)
+![alt text](img/Homepage.jpg)
 
 ### หน้าจอง
-![alt text](image-1.png)
+![alt text](img/Table.jpg)
 
 ### ประวัติ
-![alt text](image-2.png)
+![alt text](img/Hsitory.jpg)
 
 ### History in
-![alt text](image-3.png)
+
 
 ### ตัวอย่างเมนู
-![alt text](image-4.png)
+![alt text](img/Dining.jpg)
 
 ### ที่อยู่
-![alt text](image-5.png)
+![alt text](<img/Vist us.jpg>)
 
 ## Teach Stack
 
